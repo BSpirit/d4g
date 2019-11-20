@@ -76,3 +76,21 @@ func HousingCSVHandler(env *Env, w http.ResponseWriter, r *http.Request) *Status
 
 	return nil
 }
+
+
+func HousingHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusError {
+	err := r.ParseForm()
+	if err != nil {
+		return &StatusError{Code: 500, Err: utils.Trace(err)}
+	}
+
+	res, err := models.GetHousing(env.DB)
+	if err != nil {
+		return &StatusError{Code: 500, Err: utils.Trace(err)}
+	}
+
+	w.Header().Set("content-type", "application/json")
+	w.Write([]byte(res))
+
+	return nil
+}
