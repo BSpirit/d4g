@@ -65,7 +65,7 @@ func GetHousing(db *sql.DB) (string, error) {
 	}
 	result, err := json.Marshal(houses)
 	if err != nil {
-		fmt.Printf("Error: %s", err)
+		return "", utils.Trace(err)
 	}
 	return string(result), nil
 }
