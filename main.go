@@ -27,5 +27,15 @@ func main() {
 		HandlerFunc: handlers.HousingCSVHandler,
 	})
 
+	http.Handle("/tenant_csv", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.TenantCSVHandler,
+	})
+
+	http.Handle("/landlord_csv", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.LandlordCSVHandler,
+	})
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
