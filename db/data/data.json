@@ -1,0 +1,3356 @@
+[
+    {
+      "foyer": "A",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1666
+        }
+      ]
+    },
+    {
+      "foyer": "B",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 7958
+        }
+      ]
+    },
+    {
+      "foyer": "C",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 5601
+        }
+      ]
+    },
+    {
+      "foyer": "D",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 6019
+        }
+      ]
+    },
+    {
+      "foyer": "E",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1834
+        }
+      ]
+    },
+    {
+      "foyer": "F",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 8883
+        }
+      ]
+    },
+    {
+      "foyer": "G",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 2055
+        }
+      ]
+    },
+    {
+      "foyer": "H",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 5267
+        }
+      ]
+    },
+    {
+      "foyer": "I",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 2507
+        }
+      ]
+    },
+    {
+      "foyer": "J",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 809
+        }
+      ]
+    },
+    {
+      "foyer": "K",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1666
+        }
+      ]
+    },
+    {
+      "foyer": "L",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 7958
+        }
+      ]
+    },
+    {
+      "foyer": "M",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 5601
+        }
+      ]
+    },
+    {
+      "foyer": "N",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 6019
+        }
+      ]
+    },
+    {
+      "foyer": "O",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1834
+        }
+      ]
+    },
+    {
+      "foyer": "P",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 8883
+        }
+      ]
+    },
+    {
+      "foyer": "Q",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 2055
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 7051
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 1102
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 5506
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 1177
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 2441
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 2813
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 1702
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 4856
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 8882
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 2055
+        }
+      ]
+    },
+    {
+      "foyer": "R",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 5267
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 4643
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 2995
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 8441
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 9353
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3583
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 8588
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 8912
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 8556
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 7530
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 5267
+        }
+      ]
+    },
+    {
+      "foyer": "S",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 2507
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 2005
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 4911
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2434
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 6381
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3139
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 3341
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 728
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1926
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 2282
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 2507
+        }
+      ]
+    },
+    {
+      "foyer": "T",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 809
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 3800
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 1541
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 1146
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7942
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 629
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 788
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 5622
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 2774
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 9560
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 809
+        }
+      ]
+    },
+    {
+      "foyer": "U",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1666
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1568
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8027
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2576
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7440
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 5291
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9101
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 8153
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 5817
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 9470
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1666
+        }
+      ]
+    },
+    {
+      "foyer": "V",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 7958
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 4782
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 8557
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 961
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 1293
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 747
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9039
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 5500
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1080
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4819
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 7958
+        }
+      ]
+    },
+    {
+      "foyer": "W",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 5601
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1874
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 5464
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 8220
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 2301
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 6521
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 6955
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9242
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 7573
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 7121
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 5601
+        }
+      ]
+    },
+    {
+      "foyer": "X",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 6019
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 768
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 6219
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 2041
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 7141
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3706
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 7342
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 4110
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 3538
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4574
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 6019
+        }
+      ]
+    },
+    {
+      "foyer": "Y",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 1834
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 1856
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 4358
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 3568
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 6519
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3194
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 9869
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 1098
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 6312
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4736
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 1834
+        }
+      ]
+    },
+    {
+      "foyer": "Z",
+      "consumptionData": [
+        {
+          "date": "01/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "02/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "03/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "04/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "05/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "06/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "07/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "08/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "09/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "10/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "11/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "12/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "13/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "14/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "15/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "16/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "17/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "18/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "19/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "20/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "21/01/2019",
+          "consumption": 8883
+        },
+        {
+          "date": "22/01/2019",
+          "consumption": 8775
+        },
+        {
+          "date": "23/01/2019",
+          "consumption": 938
+        },
+        {
+          "date": "24/01/2019",
+          "consumption": 6371
+        },
+        {
+          "date": "25/01/2019",
+          "consumption": 4406
+        },
+        {
+          "date": "26/01/2019",
+          "consumption": 3483
+        },
+        {
+          "date": "27/01/2019",
+          "consumption": 4204
+        },
+        {
+          "date": "28/01/2019",
+          "consumption": 9733
+        },
+        {
+          "date": "29/01/2019",
+          "consumption": 1492
+        },
+        {
+          "date": "30/01/2019",
+          "consumption": 4353
+        },
+        {
+          "date": "31/01/2019",
+          "consumption": 8883
+        }
+      ]
+    }
+  ]
