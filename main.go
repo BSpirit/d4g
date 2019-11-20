@@ -27,5 +27,11 @@ func main() {
 		HandlerFunc: handlers.HousingHandler,
 	})
 
+	http.Handle("/detailsHousing", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.DetailsHousingHandler,
+	})
+
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

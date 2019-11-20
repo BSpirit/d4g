@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+	"time"
 )
 
 type Housing struct {
@@ -73,16 +74,63 @@ func GetHousing(db *sql.DB) (string, error) {
 	return string(result), nil
 }
 
-/*
-func getHousingDetails(pk int64, db *sql.DB) (string, error) {
 
-	err := db.QueryRow(`SELECT * FROM consumption as c INNER JOIN tenant as t ON c.housing_id = t.housing_id 
+func GetHousingDetails(pk string, db *sql.DB) (string, error) {
+	rows, err := db.Query(`SELECT c.housing_id, c.power_kw, c.date,
+										t.firstname, t.lastname,
+										l.lastname, l.firstname, l.company, l.address,
+										h.street_number, h.street, h.postcode, h.city
+								FROM consumption as c INNER JOIN tenant as t ON c.housing_id = t.housing_id 
 								INNER JOIN landlord as l ON c.housing_id = l.housing_id 
 								INNER JOIN housing as h ON h.housing_id = c.housing_id 
-								WHERE c.housing_id  = ?`, pk).Scan(&user.ID, &user.Username, &user.Age)
+								WHERE c.housing_id  = ?`, pk)
 	if err != nil {
-		return nil, utils.Trace(err)
+		return "", utils.Trace(err)
 	}
+	defer rows.Close()
+
+	type rowDetails struct {
+		housingId string
+		powerKw   int
+		date      time.Time
+
+		tenantFirstname string
+		tenantLastname  string
+
+		landlordLastname  string
+		landlordFirstname string
+		company           string
+		address           string
+
+		streetNumber string
+		streetName string
+		cityPostalCode string
+		cityName string
+	}
+	var detailsResult []map[string]interface{}
+
+	for rows.Next() {
+		var details rowDetails
+		err := rows.Scan(&details.housingId, &details.powerKw, &details.date,
+			&details.tenantFirstname, &details.tenantLastname,
+			&details.landlordFirstname, &details.landlordLastname, &details.company, &details.address,
+			&details.streetNumber, &details.streetName, &details.cityPostalCode, &details.cityName)
+		rowDetails := map[string]interface{}{"id" : details.housingId, "KW" : details.powerKw, "date": details.date,
+			"tenantFirstName": details.tenantFirstname, "tenantLastName": details.tenantLastname,
+			"landlordFirstName": details.landlordFirstname, "landlordLastName": details.landlordLastname,
+			"company": details.company, "address": details.address,
+			"streetNumber": details.streetNumber, "streetName": details.streetName,
+			"cityPostalCode": details.cityPostalCode, "cityName" :details.cityName}
+
+		if err != nil {
+			return "", utils.Trace(err)
+		}
+		detailsResult = append(detailsResult, rowDetails)
+	}
+	result, err := json.Marshal(detailsResult)
+	if err != nil {
+		fmt.Printf("Error: %s", err)
+	}
+
 	return string(result), nil
 }
-*/

@@ -17,3 +17,16 @@ func HousingHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusErr
 
 	return nil
 }
+
+func DetailsHousingHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusError {
+	id := r.URL.Query().Get("id")
+	res, err := models.GetHousingDetails(id, env.DB)
+	if err != nil {
+		return &StatusError{Code: 500, Err: utils.Trace(err)}
+	}
+
+	w.Header().Set("content-type", "application/json")
+	w.Write([]byte(res))
+
+	return nil
+}
