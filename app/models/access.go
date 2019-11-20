@@ -14,8 +14,8 @@ type Access struct {
 }
 
 func (a *Access) Create(tx *sql.Tx) error {
-	res, err := tx.Exec(`INSERT INTO access(login, password, housing_id)
-						 VALUES(?, ? ,?)`, a.Login, a.Password, a.HousingID, a.IsAdmin)
+	res, err := tx.Exec(`INSERT INTO access(login, password, housing_id, is_admin)
+						 VALUES(?, ? ,?, ?)`, a.Login, a.Password, a.HousingID, a.IsAdmin)
 	if err != nil {
 		return utils.Trace(err)
 	}

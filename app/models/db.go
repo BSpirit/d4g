@@ -134,6 +134,20 @@ func InsertAccess(db *sql.DB) error {
 		}
 	}
 
+	sha512 := sha512.New()
+	sha512.Write([]byte(os.Getenv("ADMIN_PASSWORD")))
+	access := &Access{
+		HousingID: sql.NullString{Valid: false},
+		Login:     "D4G2019",
+		Password:  string(sha512.Sum(nil)),
+		IsAdmin:   true,
+	}
+
+	err = access.Create(tx)
+	if err != nil {
+		return utils.Trace(err)
+	}
+
 	err = tx.Commit()
 	if err != nil {
 		return utils.Trace(err)
