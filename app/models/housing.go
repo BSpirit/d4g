@@ -39,7 +39,6 @@ func (h *Housing) Create(tx *sql.Tx) error {
 	return nil
 }
 
-
 func GetHousing(db *sql.DB) (string, error) {
 	rows, err := db.Query("SELECT housing_id, street_number, street, postcode, city FROM housing")
 	if err != nil {
@@ -47,25 +46,22 @@ func GetHousing(db *sql.DB) (string, error) {
 	}
 	defer rows.Close()
 
-	type rowHouse struct {
-		id string
-		streetNumber string
-		streetName string
-		cityPostalCode string
-		cityName string
-	}
 	var houses []map[string]string
-
 	for rows.Next() {
-		var house rowHouse
-		err := rows.Scan(&house.id, &house.streetNumber, &house.streetName, &house.cityPostalCode, &house.cityName)
-		rowHouse := map[string]string{"id" : house.id, "streetNumber": house.streetNumber, "streetName": house.streetName,
-			"cityPostalCode": house.cityPostalCode, "cityName" :house.cityName}
-
+		var id, streetNumber, streetName, cityPostalCode, cityName string
+		err := rows.Scan(&id, &streetNumber, &streetName, &cityPostalCode, &cityName)
 		if err != nil {
 			return "", utils.Trace(err)
 		}
-		houses = append(houses, rowHouse)
+
+		house := map[string]string{
+			"id":             id,
+			"streetNumber":   streetNumber,
+			"streetName":     streetName,
+			"cityPostalCode": cityPostalCode,
+			"cityName":       cityName}
+
+		houses = append(houses, house)
 	}
 	result, err := json.Marshal(houses)
 	if err != nil {
@@ -73,7 +69,6 @@ func GetHousing(db *sql.DB) (string, error) {
 	}
 	return string(result), nil
 }
-
 
 func GetHousingDetails(pk string, db *sql.DB) (string, error) {
 	rows, err := db.Query(`SELECT c.housing_id, c.power_kw, c.date,
@@ -102,10 +97,10 @@ func GetHousingDetails(pk string, db *sql.DB) (string, error) {
 		company           string
 		address           string
 
-		streetNumber string
-		streetName string
+		streetNumber   string
+		streetName     string
 		cityPostalCode string
-		cityName string
+		cityName       string
 	}
 	var detailsResult []map[string]interface{}
 
@@ -115,12 +110,12 @@ func GetHousingDetails(pk string, db *sql.DB) (string, error) {
 			&details.tenantFirstname, &details.tenantLastname,
 			&details.landlordFirstname, &details.landlordLastname, &details.company, &details.address,
 			&details.streetNumber, &details.streetName, &details.cityPostalCode, &details.cityName)
-		rowDetails := map[string]interface{}{"id" : details.housingId, "KW" : details.powerKw, "date": details.date,
+		rowDetails := map[string]interface{}{"id": details.housingId, "KW": details.powerKw, "date": details.date,
 			"tenantFirstName": details.tenantFirstname, "tenantLastName": details.tenantLastname,
 			"landlordFirstName": details.landlordFirstname, "landlordLastName": details.landlordLastname,
 			"company": details.company, "address": details.address,
 			"streetNumber": details.streetNumber, "streetName": details.streetName,
-			"cityPostalCode": details.cityPostalCode, "cityName" :details.cityName}
+			"cityPostalCode": details.cityPostalCode, "cityName": details.cityName}
 
 		if err != nil {
 			return "", utils.Trace(err)
