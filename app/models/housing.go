@@ -45,38 +45,44 @@ func GetHousing(db *sql.DB) (string, error) {
 		return "", utils.Trace(err)
 	}
 	defer rows.Close()
-	var houses []map[string]interface{}
+
+	type rowHouse struct {
+		id string
+		streetNumber string
+		streetName string
+		cityPostalCode string
+		cityName string
+	}
+	var houses []map[string]string
+
 	for rows.Next() {
-		house := map[string]interface{}{
-			"id": "",
-			"streetNumber": "",
-			"streetName": "",
-			"cityPostalCode": "",
-			"cityName": "",
-		}
-
-		housingId := ""
-		streetNumber := ""
-		street := ""
-		postalcode := ""
-		city := ""
-
-		err := rows.Scan(&housingId, &streetNumber, &street, &postalcode, &city)
-		house["id"] = housingId
-		house["streetNumber"] = streetNumber
-		house["streetName"] = street
-		house["cityPostalCode"] = postalcode
-		house["cityName"] = city
+		var house rowHouse
+		err := rows.Scan(&house.id, &house.streetNumber, &house.streetName, &house.cityPostalCode, &house.cityName)
+		rowHouse := map[string]string{"id" : house.id, "streetNumber": house.streetNumber, "streetName": house.streetName,
+			"cityPostalCode": house.cityPostalCode, "cityName" :house.cityName}
 
 		if err != nil {
 			return "", utils.Trace(err)
 		}
-		houses = append(houses, house)
+		houses = append(houses, rowHouse)
 	}
 	result, err := json.Marshal(houses)
 	if err != nil {
 		fmt.Printf("Error: %s", err)
 	}
-
 	return string(result), nil
 }
+
+/*
+func getHousingDetails(pk int64, db *sql.DB) (string, error) {
+
+	err := db.QueryRow(`SELECT * FROM consumption as c INNER JOIN tenant as t ON c.housing_id = t.housing_id 
+								INNER JOIN landlord as l ON c.housing_id = l.housing_id 
+								INNER JOIN housing as h ON h.housing_id = c.housing_id 
+								WHERE c.housing_id  = ?`, pk).Scan(&user.ID, &user.Username, &user.Age)
+	if err != nil {
+		return nil, utils.Trace(err)
+	}
+	return string(result), nil
+}
+*/
