@@ -4,8 +4,8 @@ import (
 	"d4g/app/utils"
 	"database/sql"
 	"encoding/json"
-	"fmt"
-	"time"
+
+	"github.com/jmoiron/sqlx"
 )
 
 type Housing struct {
@@ -39,29 +39,22 @@ func (h *Housing) Create(tx *sql.Tx) error {
 	return nil
 }
 
-func GetHousing(db *sql.DB) (string, error) {
-	rows, err := db.Query("SELECT housing_id, street_number, street, postcode, city FROM housing")
+func GetHousing(db *sqlx.DB) (string, error) {
+	rows, err := db.Queryx("SELECT housing_id, street_number, street, postcode, city FROM housing")
 	if err != nil {
 		return "", utils.Trace(err)
 	}
 	defer rows.Close()
 
-	var houses []map[string]string
+	var houses []map[string]interface{}
 	for rows.Next() {
-		var id, streetNumber, streetName, cityPostalCode, cityName string
-		err := rows.Scan(&id, &streetNumber, &streetName, &cityPostalCode, &cityName)
+		row := make(map[string]interface{})
+		err = rows.MapScan(row)
 		if err != nil {
 			return "", utils.Trace(err)
 		}
 
-		house := map[string]string{
-			"id":             id,
-			"streetNumber":   streetNumber,
-			"streetName":     streetName,
-			"cityPostalCode": cityPostalCode,
-			"cityName":       cityName}
-
-		houses = append(houses, house)
+		houses = append(houses, row)
 	}
 	result, err := json.Marshal(houses)
 	if err != nil {
@@ -70,8 +63,8 @@ func GetHousing(db *sql.DB) (string, error) {
 	return string(result), nil
 }
 
-func GetHousingDetails(pk string, db *sql.DB) (string, error) {
-	rows, err := db.Query(`SELECT c.housing_id, c.power_kw, c.date,
+func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
+	rows, err := db.Queryx(`SELECT c.housing_id, c.power_kw, c.date,
 										t.firstname, t.lastname,
 										l.lastname, l.firstname, l.company, l.address,
 										h.street_number, h.street, h.postcode, h.city
@@ -84,47 +77,19 @@ func GetHousingDetails(pk string, db *sql.DB) (string, error) {
 	}
 	defer rows.Close()
 
-	type rowDetails struct {
-		housingId string
-		powerKw   int
-		date      time.Time
-
-		tenantFirstname string
-		tenantLastname  string
-
-		landlordLastname  string
-		landlordFirstname string
-		company           string
-		address           string
-
-		streetNumber   string
-		streetName     string
-		cityPostalCode string
-		cityName       string
-	}
 	var detailsResult []map[string]interface{}
-
 	for rows.Next() {
-		var details rowDetails
-		err := rows.Scan(&details.housingId, &details.powerKw, &details.date,
-			&details.tenantFirstname, &details.tenantLastname,
-			&details.landlordFirstname, &details.landlordLastname, &details.company, &details.address,
-			&details.streetNumber, &details.streetName, &details.cityPostalCode, &details.cityName)
-		rowDetails := map[string]interface{}{"id": details.housingId, "KW": details.powerKw, "date": details.date,
-			"tenantFirstName": details.tenantFirstname, "tenantLastName": details.tenantLastname,
-			"landlordFirstName": details.landlordFirstname, "landlordLastName": details.landlordLastname,
-			"company": details.company, "address": details.address,
-			"streetNumber": details.streetNumber, "streetName": details.streetName,
-			"cityPostalCode": details.cityPostalCode, "cityName": details.cityName}
-
+		row := make(map[string]interface{})
+		err = rows.MapScan(row)
 		if err != nil {
 			return "", utils.Trace(err)
 		}
-		detailsResult = append(detailsResult, rowDetails)
+
+		detailsResult = append(detailsResult, row)
 	}
 	result, err := json.Marshal(detailsResult)
 	if err != nil {
-		fmt.Printf("Error: %s", err)
+		return "", utils.Trace(err)
 	}
 
 	return string(result), nil
