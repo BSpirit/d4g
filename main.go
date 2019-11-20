@@ -27,5 +27,10 @@ func main() {
 		HandlerFunc: handlers.HousingCSVHandler,
 	})
 
+	http.Handle("/access_csv", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.AccessCSVHandler,
+	})
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
