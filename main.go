@@ -22,9 +22,9 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	http.Handle("/", handlers.Handler{
+	http.Handle("/housing_csv", handlers.Handler{
 		Env:         env,
-		HandlerFunc: handlers.IndexHandler,
+		HandlerFunc: handlers.HousingCSVHandler,
 	})
 
 	log.Fatal(http.ListenAndServe(":8080", nil))
