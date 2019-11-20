@@ -2,7 +2,6 @@ package handlers
 
 import (
 	"database/sql"
-	"html/template"
 	"log"
 	"net/http"
 )
@@ -22,8 +21,7 @@ func (se *StatusError) Unwrap() error {
 }
 
 type Env struct {
-	DB        *sql.DB
-	Templates *template.Template
+	DB *sql.DB
 }
 
 type Handler struct {

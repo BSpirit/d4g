@@ -7,7 +7,7 @@ import (
 
 type Access struct {
 	AccessID  int64
-	HousingID string
+	HousingID sql.NullString
 	Login     string
 	Password  string
 	IsAdmin   bool
