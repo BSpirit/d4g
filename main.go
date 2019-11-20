@@ -27,6 +27,11 @@ func main() {
 		HandlerFunc: handlers.HousingCSVHandler,
 	})
 
+	http.Handle("/access_csv", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.AccessCSVHandler,
+	})
+
 	http.Handle("/tenant_csv", handlers.Handler{
 		Env:         env,
 		HandlerFunc: handlers.TenantCSVHandler,
