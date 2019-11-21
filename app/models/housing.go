@@ -4,6 +4,7 @@ import (
 	"d4g/app/utils"
 	"database/sql"
 	"encoding/json"
+	"fmt"
 	"github.com/jmoiron/sqlx"
 )
 
@@ -62,18 +63,26 @@ func GetHousing(db *sqlx.DB) (string, error) {
 	return string(result), nil
 }
 
-func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
+func GetHousingDetails(pk string, limit string, db *sqlx.DB) (string, error) {
 
 	type Details struct{
 		Housing Housing
 		Consumptions []Consumption
 	}
+	if limit != "" {
+		limit = "LIMIT " + limit
+	}
+	request := fmt.Sprintf(`SELECT h.housing_id, h.street_number, h.street, h.postcode, h.city, h.type,
+	h.surface_area, h.rooms, h.heating_system, h.year,
+		c.consumption_id, c.housing_id, c.power_kw, c.date
+	FROM housing as h
+	INNER JOIN (SELECT c.consumption_id, c.housing_id, c.power_kw, c.date
+	FROM consumption as c %s ) as c
+	ON  (h.housing_id = c.housing_id)
+	WHERE h.housing_id = ?`, limit)
 
-	rows, err := db.Queryx(`SELECT h.housing_id, h.street_number, h.street, h.postcode, h.city,
-	h.type, h.surface_area, h.rooms, h.heating_system, h.year,
-	c.consumption_id, c.power_kw, c.date 
-	FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id 
-	WHERE h.housing_id = ?`, pk)
+	rows, err := db.Queryx(request, pk)
+
 	if err != nil {
 		return "", utils.Trace(err)
 	}
@@ -85,13 +94,13 @@ func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
 		var conso Consumption
 		err := rows.Scan(&house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
 			&house.Type, &house.SurfaceArea, &house.Rooms, &house.HeatingSystem, &house.Year,
-			&conso.ConsumptionID, &conso.PowerKW, &conso.Date)
+			&conso.ConsumptionID, &conso.HousingID, &conso.PowerKW, &conso.Date)
 		if err != nil {
 			return "", utils.Trace(err)
 		}
 		consumptions = append(consumptions, Consumption{
 			ConsumptionID: conso.ConsumptionID,
-			HousingID:     house.HousingID,
+			HousingID:     conso.HousingID,
 			PowerKW:       conso.PowerKW,
 			Date:          conso.Date,
 		})
@@ -121,6 +130,8 @@ func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
 	return string(result), nil
 }
 
+
+
 func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 
 	type Details struct{
@@ -128,11 +139,15 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 		Consumptions []Consumption
 	}
 
-	rows, err := db.Queryx(`SELECT (SELECT COUNT(*) FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id), 
-	h.housing_id, h.street_number, h.street, h.postcode, h.city,
-	h.type, h.surface_area, h.rooms, h.heating_system, h.year,
-	c.consumption_id, c.housing_id, c.power_kw, c.date 
-	FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id ORDER BY h.housing_id`)
+	request := fmt.Sprintf(`SELECT h.housing_id, h.street_number, h.street, h.postcode, h.city, h.type,
+	h.surface_area, h.rooms, h.heating_system, h.year,
+		c.consumption_id, c.housing_id, c.power_kw, c.date
+	FROM housing as h
+	INNER JOIN (SELECT c.consumption_id, c.housing_id, c.power_kw, c.date
+	FROM consumption as c ) as c
+	ON  (h.housing_id = c.housing_id)`)
+
+	rows, err := db.Queryx(request)
 	if err != nil {
 		return "", utils.Trace(err)
 	}
@@ -141,13 +156,13 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 	var lastHousingID = ""
 	var consumptions []Consumption
 	var details []Details
- 	var count, cpt  = 0, 0
+ 	var onGoing = 0
 	var house, houseResult Housing
 
 	for rows.Next() {
-		cpt = cpt + 1
+		//cpt = cpt + 1
 		var conso Consumption
-		err := rows.Scan(&count, &house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
+		err := rows.Scan(&house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
 			&house.Type, &house.SurfaceArea, &house.Rooms, &house.HeatingSystem, &house.Year,
 			&conso.ConsumptionID, &conso.HousingID, &conso.PowerKW, &conso.Date)
 		if err != nil {
@@ -163,10 +178,11 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 			}
 		}
 
-		if (lastHousingID != house.HousingID) || (cpt == count) {
+		if lastHousingID != house.HousingID {
 			details = append(details, Details{Housing: houseResult, Consumptions: consumptions})
 			lastHousingID = house.HousingID
 			consumptions = make([]Consumption,0)
+			onGoing = 0
 		} else {
 			consumptions = append(consumptions, Consumption{
 				ConsumptionID: conso.ConsumptionID,
@@ -178,8 +194,13 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 				HeatingSystem: house.HeatingSystem, Year: house.Year, StreetNumber: house.StreetNumber, Street: house.Street,
 				Postcode: house.Postcode, City: house.City,
 			}
+			onGoing = 1
 		}
 	}
+	if onGoing == 1 {
+		details = append(details, Details{Housing: houseResult, Consumptions: consumptions})
+	}
+
 	result, err := json.Marshal(details)
 	if err != nil {
 		return "", utils.Trace(err)
