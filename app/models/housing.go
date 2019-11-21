@@ -120,3 +120,70 @@ func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
 
 	return string(result), nil
 }
+
+func GetAllHousingDetails(db *sqlx.DB) (string, error) {
+
+	type Details struct{
+		Housing Housing
+		Consumptions []Consumption
+	}
+
+	rows, err := db.Queryx(`SELECT (SELECT COUNT(*) FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id), 
+	h.housing_id, h.street_number, h.street, h.postcode, h.city,
+	h.type, h.surface_area, h.rooms, h.heating_system, h.year,
+	c.consumption_id, c.housing_id, c.power_kw, c.date 
+	FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id ORDER BY h.housing_id`)
+	if err != nil {
+		return "", utils.Trace(err)
+	}
+	defer rows.Close()
+
+	var lastHousingID = ""
+	var consumptions []Consumption
+	var details []Details
+ 	var count, cpt  = 0, 0
+	var house, houseResult Housing
+
+	for rows.Next() {
+		cpt = cpt + 1
+		var conso Consumption
+		err := rows.Scan(&count, &house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
+			&house.Type, &house.SurfaceArea, &house.Rooms, &house.HeatingSystem, &house.Year,
+			&conso.ConsumptionID, &conso.HousingID, &conso.PowerKW, &conso.Date)
+		if err != nil {
+			return "", utils.Trace(err)
+		}
+
+		//First iteration
+		if lastHousingID == "" {
+			lastHousingID = house.HousingID
+			houseResult = Housing{HousingID: house.HousingID, Type: house.Type, SurfaceArea: house.SurfaceArea, Rooms: house.Rooms,
+				HeatingSystem: house.HeatingSystem, Year: house.Year, StreetNumber: house.StreetNumber, Street: house.Street,
+				Postcode: house.Postcode, City: house.City,
+			}
+		}
+
+		if (lastHousingID != house.HousingID) || (cpt == count) {
+			details = append(details, Details{Housing: houseResult, Consumptions: consumptions})
+			lastHousingID = house.HousingID
+			consumptions = make([]Consumption,0)
+		} else {
+			consumptions = append(consumptions, Consumption{
+				ConsumptionID: conso.ConsumptionID,
+				HousingID:     conso.HousingID,
+				PowerKW:       conso.PowerKW,
+				Date:          conso.Date,
+			})
+			houseResult = Housing{HousingID: house.HousingID, Type: house.Type, SurfaceArea: house.SurfaceArea, Rooms: house.Rooms,
+				HeatingSystem: house.HeatingSystem, Year: house.Year, StreetNumber: house.StreetNumber, Street: house.Street,
+				Postcode: house.Postcode, City: house.City,
+			}
+		}
+	}
+	result, err := json.Marshal(details)
+	if err != nil {
+		return "", utils.Trace(err)
+	}
+
+	return string(result), nil
+}
