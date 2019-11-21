@@ -28,3 +28,13 @@ func (a *Access) Create(tx *sql.Tx) error {
 
 	return nil
 }
+
+func (a *Access) IsAlreadyExist(db *sql.Tx) bool {
+	var idExist = db.QueryRow("SELECT access_id FROM access WHERE login = ?", a.Login)
+
+	if idExist == nil {
+		return false
+	}
+
+	return true
+}

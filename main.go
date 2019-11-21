@@ -34,5 +34,10 @@ func main() {
 		HandlerFunc: handlers.AllDetailsHousingHandler,
 	})
 
+	http.Handle("/createAccess", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.CreateAccessHandler,
+	})
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
