@@ -40,3 +40,13 @@ func GetAccessFromLogin(db *sqlx.DB, login string) (*Access, error) {
 
 	return access, nil
 }
+
+func (a *Access) IsAlreadyExist(db *sql.Tx) bool {
+	var idExist = db.QueryRow("SELECT access_id FROM access WHERE login = ?", a.Login)
+
+	if idExist == nil {
+		return false
+	}
+
+	return true
+}
