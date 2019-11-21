@@ -52,5 +52,10 @@ func main() {
 		HandlerFunc: handlers.CreateAccessHandler,
 	})
 
+	http.Handle("/createConsumption", handlers.Handler{
+		Env:         env,
+		HandlerFunc: handlers.CreateConsumptionHandler,
+	})
+
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

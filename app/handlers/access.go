@@ -4,27 +4,16 @@ import (
 	"crypto/sha512"
 	"d4g/app/models"
 	"d4g/app/utils"
-	"database/sql"
 	"fmt"
 	"net/http"
 )
-
-func  StringToSQLNull(s string) sql.NullString {
-	if s == "" {
-		return sql.NullString{}
-	}
-	return sql.NullString{
-		String: s,
-		Valid:  true,
-	}
-}
 
 func CreateAccessHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusError {
 	sha512 := sha512.New()
 	sha512.Write([]byte(r.FormValue("password")))
 
 	access := models.Access{
-		HousingID: StringToSQLNull(r.FormValue("housingid")),
+		HousingID: utils.StringToSQLNull(r.FormValue("housingid")),
 		Login: r.FormValue("login"),
 		Password: string(sha512.Sum(nil)),
 	}

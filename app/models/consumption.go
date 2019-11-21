@@ -27,3 +27,13 @@ func (c *Consumption) Create(tx *sql.Tx) error {
 
 	return nil
 }
+
+func (c *Consumption) IsAlreadyExist(db *sql.Tx) bool {
+	var idExist = db.QueryRow("SELECT consumption_id FROM consumption WHERE date = ? AND housing_id", c.Date, c.HousingID)
+
+	if idExist == nil {
+		return false
+	}
+
+	return true
+}
