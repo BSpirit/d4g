@@ -15,7 +15,7 @@ CREATE TABLE housing (
 );
 
 CREATE TABLE consumption (
-    "consumption_id" INTEGER,
+    "consumption_id" INTEGER NOT NULL PRIMARY KEY,
     "housing_id" VARCHAR,
     "power_kw" INTEGER,
     "date" DATE,
@@ -30,8 +30,6 @@ CREATE TABLE access (
     "is_admin" BOOLEAN NOT NULL DEFAULT FALSE,
     CONSTRAINT fk_credentials_housing_id FOREIGN KEY (housing_id) REFERENCES housing(housing_id)
 );
-
-
 
 CREATE TABLE landlord (
     "landlord_id" INTEGER  NOT NULL PRIMARY KEY,
