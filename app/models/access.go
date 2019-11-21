@@ -3,6 +3,8 @@ package models
 import (
 	"d4g/app/utils"
 	"database/sql"
+
+	"github.com/jmoiron/sqlx"
 )
 
 type Access struct {
@@ -27,4 +29,14 @@ func (a *Access) Create(tx *sql.Tx) error {
 	a.AccessID = id
 
 	return nil
+}
+
+func GetAccessFromLogin(db *sqlx.DB, login string) (*Access, error) {
+	access := &Access{}
+	err := db.QueryRowx("SELECT * FROM access WHERE login = ?", login).Scan(&access.AccessID, &access.HousingID, &access.Login, &access.Password, &access.IsAdmin)
+	if err != nil {
+		return nil, utils.Trace(err)
+	}
+
+	return access, nil
 }

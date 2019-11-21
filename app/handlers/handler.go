@@ -22,7 +22,8 @@ func (se *StatusError) Unwrap() error {
 }
 
 type Env struct {
-	DB *sqlx.DB
+	DB     *sqlx.DB
+	JWTKey []byte
 }
 
 type Handler struct {
