@@ -7,10 +7,10 @@ import (
 )
 
 type Consumption struct {
-	ConsumptionID int64
-	HousingID     string
-	PowerKW       int
-	Date          time.Time
+	ConsumptionID int64 `json:"id"`
+	HousingID     string `json:"housingId"`
+	PowerKW       int `json:"powerKw"`
+	Date          time.Time `json:"date"`
 }
 
 func (c *Consumption) Create(tx *sql.Tx) error {
