@@ -11,23 +11,10 @@ import (
 	"strconv"
 	"time"
 
-	_ "github.com/mattn/go-sqlite3"
+	"github.com/jmoiron/sqlx"
 )
 
-func InitDB(dataSourceName string) (*sql.DB, error) {
-	db, err := sql.Open("sqlite3", dataSourceName)
-	if err != nil {
-		return nil, err
-	}
-
-	if err = db.Ping(); err != nil {
-		return nil, err
-	}
-
-	return db, nil
-}
-
-func InsertHousings(db *sql.DB) error {
+func InsertHousings(db *sqlx.DB) error {
 	csvFile, err := os.Open("db/data/housings.csv")
 	if err != nil {
 		return utils.Trace(err)
@@ -95,7 +82,7 @@ func InsertHousings(db *sql.DB) error {
 	return nil
 }
 
-func InsertAccess(db *sql.DB) error {
+func InsertAccess(db *sqlx.DB) error {
 	csvFile, err := os.Open("db/data/access.csv")
 	if err != nil {
 		return utils.Trace(err)
@@ -156,7 +143,7 @@ func InsertAccess(db *sql.DB) error {
 	return nil
 }
 
-func InsertTenant(db *sql.DB) error {
+func InsertTenant(db *sqlx.DB) error {
 	csvFile, err := os.Open("db/data/tenant.csv")
 	if err != nil {
 		return utils.Trace(err)
@@ -202,7 +189,7 @@ func InsertTenant(db *sql.DB) error {
 	return nil
 }
 
-func InsertLandlord(db *sql.DB) error {
+func InsertLandlord(db *sqlx.DB) error {
 	csvFile, err := os.Open("db/data/landlord.csv")
 	if err != nil {
 		return utils.Trace(err)
@@ -250,7 +237,7 @@ func InsertLandlord(db *sql.DB) error {
 	return nil
 }
 
-func InsertConsumption(db *sql.DB) error {
+func InsertConsumption(db *sqlx.DB) error {
 	jsonFile, err := os.Open("db/data/data.json")
 	if err != nil {
 		return utils.Trace(err)

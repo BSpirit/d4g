@@ -4,20 +4,20 @@ import (
 	"d4g/app/utils"
 	"database/sql"
 	"encoding/json"
-	"fmt"
+	"github.com/jmoiron/sqlx"
 )
 
 type Housing struct {
-	HousingID     string
-	Type          int
-	SurfaceArea   int
-	Rooms         int
-	HeatingSystem string
-	Year          int
-	StreetNumber  string
-	Street        string
-	Postcode      string
-	City          string
+	HousingID     string `json:"id"`
+	Type          int	`json:"type"`
+	SurfaceArea   int	`json:"surfaceArea"`
+	Rooms         int	`json:"roomsNb"`
+	HeatingSystem string `json:"heatingSystem"`
+	Year          int	`json:"constructionYear"`
+	StreetNumber  string `json:"streetNumber"`
+	Street        string `json:"streetName"`
+	Postcode      string `json:"cityPostalCode"`
+	City          string `json:"cityName"`
 }
 
 func (h *Housing) Create(tx *sql.Tx) error {
@@ -38,44 +38,151 @@ func (h *Housing) Create(tx *sql.Tx) error {
 	return nil
 }
 
-
-func GetHousing(db *sql.DB) (string, error) {
-	rows, err := db.Query("SELECT housing_id, street_number, street, postcode, city FROM housing")
+func GetHousing(db *sqlx.DB) (string, error) {
+	rows, err := db.Queryx("SELECT housing_id, street_number, street, postcode, city FROM housing")
 	if err != nil {
 		return "", utils.Trace(err)
 	}
 	defer rows.Close()
+
 	var houses []map[string]interface{}
 	for rows.Next() {
-		house := map[string]interface{}{
-			"id": "",
-			"streetNumber": "",
-			"streetName": "",
-			"cityPostalCode": "",
-			"cityName": "",
-		}
-
-		housingId := ""
-		streetNumber := ""
-		street := ""
-		postalcode := ""
-		city := ""
-
-		err := rows.Scan(&housingId, &streetNumber, &street, &postalcode, &city)
-		house["id"] = housingId
-		house["streetNumber"] = streetNumber
-		house["streetName"] = street
-		house["cityPostalCode"] = postalcode
-		house["cityName"] = city
-
+		row := make(map[string]interface{})
+		err = rows.MapScan(row)
 		if err != nil {
 			return "", utils.Trace(err)
 		}
-		houses = append(houses, house)
+
+		houses = append(houses, row)
 	}
 	result, err := json.Marshal(houses)
 	if err != nil {
-		fmt.Printf("Error: %s", err)
+		return "", utils.Trace(err)
+	}
+	return string(result), nil
+}
+
+func GetHousingDetails(pk string, db *sqlx.DB) (string, error) {
+
+	type Details struct{
+		Housing Housing
+		Consumptions []Consumption
+	}
+
+	rows, err := db.Queryx(`SELECT h.housing_id, h.street_number, h.street, h.postcode, h.city,
+	h.type, h.surface_area, h.rooms, h.heating_system, h.year,
+	c.consumption_id, c.power_kw, c.date 
+	FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id 
+	WHERE h.housing_id = ?`, pk)
+	if err != nil {
+		return "", utils.Trace(err)
+	}
+	defer rows.Close()
+
+	var house Housing
+	var consumptions []Consumption
+	for rows.Next() {
+		var conso Consumption
+		err := rows.Scan(&house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
+			&house.Type, &house.SurfaceArea, &house.Rooms, &house.HeatingSystem, &house.Year,
+			&conso.ConsumptionID, &conso.PowerKW, &conso.Date)
+		if err != nil {
+			return "", utils.Trace(err)
+		}
+		consumptions = append(consumptions, Consumption{
+			ConsumptionID: conso.ConsumptionID,
+			HousingID:     house.HousingID,
+			PowerKW:       conso.PowerKW,
+			Date:          conso.Date,
+		})
+	}
+	houseResult := Housing{
+		HousingID: house.HousingID,
+		Type: house.Type,
+		SurfaceArea: house.SurfaceArea,
+		Rooms: house.Rooms,
+		HeatingSystem: house.HeatingSystem,
+		Year: house.Year,
+		StreetNumber: house.StreetNumber,
+		Street: house.Street,
+		Postcode: house.Postcode,
+		City: house.City,
+	}
+	details := Details{
+		Housing:      houseResult,
+		Consumptions: consumptions,
+	}
+
+	result, err := json.Marshal(details)
+	if err != nil {
+		return "", utils.Trace(err)
+	}
+
+	return string(result), nil
+}
+
+func GetAllHousingDetails(db *sqlx.DB) (string, error) {
+
+	type Details struct{
+		Housing Housing
+		Consumptions []Consumption
+	}
+
+	rows, err := db.Queryx(`SELECT (SELECT COUNT(*) FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id), 
+	h.housing_id, h.street_number, h.street, h.postcode, h.city,
+	h.type, h.surface_area, h.rooms, h.heating_system, h.year,
+	c.consumption_id, c.housing_id, c.power_kw, c.date 
+	FROM housing as h INNER JOIN consumption as c ON h.housing_id = c.housing_id ORDER BY h.housing_id`)
+	if err != nil {
+		return "", utils.Trace(err)
+	}
+	defer rows.Close()
+
+	var lastHousingID = ""
+	var consumptions []Consumption
+	var details []Details
+ 	var count, cpt  = 0, 0
+	var house, houseResult Housing
+
+	for rows.Next() {
+		cpt = cpt + 1
+		var conso Consumption
+		err := rows.Scan(&count, &house.HousingID, &house.StreetNumber, &house.Street, &house.Postcode, &house.City,
+			&house.Type, &house.SurfaceArea, &house.Rooms, &house.HeatingSystem, &house.Year,
+			&conso.ConsumptionID, &conso.HousingID, &conso.PowerKW, &conso.Date)
+		if err != nil {
+			return "", utils.Trace(err)
+		}
+
+		//First iteration
+		if lastHousingID == "" {
+			lastHousingID = house.HousingID
+			houseResult = Housing{HousingID: house.HousingID, Type: house.Type, SurfaceArea: house.SurfaceArea, Rooms: house.Rooms,
+				HeatingSystem: house.HeatingSystem, Year: house.Year, StreetNumber: house.StreetNumber, Street: house.Street,
+				Postcode: house.Postcode, City: house.City,
+			}
+		}
+
+		if (lastHousingID != house.HousingID) || (cpt == count) {
+			details = append(details, Details{Housing: houseResult, Consumptions: consumptions})
+			lastHousingID = house.HousingID
+			consumptions = make([]Consumption,0)
+		} else {
+			consumptions = append(consumptions, Consumption{
+				ConsumptionID: conso.ConsumptionID,
+				HousingID:     conso.HousingID,
+				PowerKW:       conso.PowerKW,
+				Date:          conso.Date,
+			})
+			houseResult = Housing{HousingID: house.HousingID, Type: house.Type, SurfaceArea: house.SurfaceArea, Rooms: house.Rooms,
+				HeatingSystem: house.HeatingSystem, Year: house.Year, StreetNumber: house.StreetNumber, Street: house.Street,
+				Postcode: house.Postcode, City: house.City,
+			}
+		}
+	}
+	result, err := json.Marshal(details)
+	if err != nil {
+		return "", utils.Trace(err)
 	}
 
 	return string(result), nil

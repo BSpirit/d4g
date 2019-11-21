@@ -1,9 +1,10 @@
 package handlers
 
 import (
-	"database/sql"
 	"log"
 	"net/http"
+
+	"github.com/jmoiron/sqlx"
 )
 
 type StatusError struct {
@@ -21,7 +22,7 @@ func (se *StatusError) Unwrap() error {
 }
 
 type Env struct {
-	DB *sql.DB
+	DB *sqlx.DB
 }
 
 type Handler struct {

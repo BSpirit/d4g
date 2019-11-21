@@ -6,10 +6,10 @@ import (
 )
 
 type Tenant struct {
-	TenantID	int64
-	HousingID   string
-	Firstname	string
-	Lastname	string
+	TenantID  int64
+	HousingID string
+	Firstname string
+	Lastname  string
 }
 
 func (t *Tenant) Create(tx *sql.Tx) error {
