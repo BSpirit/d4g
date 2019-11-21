@@ -20,7 +20,8 @@ func HousingHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusErr
 
 func DetailsHousingHandler(env *Env, w http.ResponseWriter, r *http.Request) *StatusError {
 	id := r.URL.Query().Get("id")
-	res, err := models.GetHousingDetails(id, env.DB)
+	limit := r.URL.Query().Get("limit")
+	res, err := models.GetHousingDetails(id, limit, env.DB)
 	if err != nil {
 		return &StatusError{Code: 500, Err: utils.Trace(err)}
 	}
