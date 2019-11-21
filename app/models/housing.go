@@ -5,16 +5,17 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
+
 	"github.com/jmoiron/sqlx"
 )
 
 type Housing struct {
 	HousingID     string `json:"id"`
-	Type          int	`json:"type"`
-	SurfaceArea   int	`json:"surfaceArea"`
-	Rooms         int	`json:"roomsNb"`
+	Type          int    `json:"type"`
+	SurfaceArea   int    `json:"surfaceArea"`
+	Rooms         int    `json:"roomsNb"`
 	HeatingSystem string `json:"heatingSystem"`
-	Year          int	`json:"constructionYear"`
+	Year          int    `json:"constructionYear"`
 	StreetNumber  string `json:"streetNumber"`
 	Street        string `json:"streetName"`
 	Postcode      string `json:"cityPostalCode"`
@@ -40,7 +41,7 @@ func (h *Housing) Create(tx *sql.Tx) error {
 }
 
 func GetHousing(db *sqlx.DB) (string, error) {
-	rows, err := db.Queryx("SELECT housing_id, street_number, street, postcode, city FROM housing")
+	rows, err := db.Queryx("SELECT housing_id as id, street_number as streetNumber, street as streetName, postcode as cityPostalCode, city as cityName FROM housing")
 	if err != nil {
 		return "", utils.Trace(err)
 	}
@@ -65,8 +66,8 @@ func GetHousing(db *sqlx.DB) (string, error) {
 
 func GetHousingDetails(pk string, limit string, db *sqlx.DB) (string, error) {
 
-	type Details struct{
-		Housing Housing
+	type Details struct {
+		Housing      Housing
 		Consumptions []Consumption
 	}
 	if limit != "" {
@@ -106,16 +107,16 @@ func GetHousingDetails(pk string, limit string, db *sqlx.DB) (string, error) {
 		})
 	}
 	houseResult := Housing{
-		HousingID: house.HousingID,
-		Type: house.Type,
-		SurfaceArea: house.SurfaceArea,
-		Rooms: house.Rooms,
+		HousingID:     house.HousingID,
+		Type:          house.Type,
+		SurfaceArea:   house.SurfaceArea,
+		Rooms:         house.Rooms,
 		HeatingSystem: house.HeatingSystem,
-		Year: house.Year,
-		StreetNumber: house.StreetNumber,
-		Street: house.Street,
-		Postcode: house.Postcode,
-		City: house.City,
+		Year:          house.Year,
+		StreetNumber:  house.StreetNumber,
+		Street:        house.Street,
+		Postcode:      house.Postcode,
+		City:          house.City,
 	}
 	details := Details{
 		Housing:      houseResult,
@@ -130,12 +131,10 @@ func GetHousingDetails(pk string, limit string, db *sqlx.DB) (string, error) {
 	return string(result), nil
 }
 
-
-
 func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 
-	type Details struct{
-		Housing Housing
+	type Details struct {
+		Housing      Housing
 		Consumptions []Consumption
 	}
 
@@ -156,7 +155,7 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 	var lastHousingID = ""
 	var consumptions []Consumption
 	var details []Details
- 	var onGoing = 0
+	var onGoing = 0
 	var house, houseResult Housing
 
 	for rows.Next() {
@@ -181,7 +180,7 @@ func GetAllHousingDetails(db *sqlx.DB) (string, error) {
 		if lastHousingID != house.HousingID {
 			details = append(details, Details{Housing: houseResult, Consumptions: consumptions})
 			lastHousingID = house.HousingID
-			consumptions = make([]Consumption,0)
+			consumptions = make([]Consumption, 0)
 			onGoing = 0
 		} else {
 			consumptions = append(consumptions, Consumption{
